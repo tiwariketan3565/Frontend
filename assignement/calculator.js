@@ -1,6 +1,4 @@
-// Basic demo behavior (eval is used here only for the classroom/local demo).
-  // DO NOT eval untrusted input in production.
-  (function(){
+(function(){
     const display = document.getElementById('display');
     let expr = '';
 
@@ -14,21 +12,19 @@
         if(v === 'C'){ expr = ''; render(); return; }
         if(v === '='){
           try {
-            // simple replace for display symbols (optional)
-            // evaluate expression - demo only
+            
             const result = Function('"use strict";return (' + expr + ')')();
             expr = String(result);
           } catch(e) { expr = 'Error'; }
           render();
           return;
         }
-        // append normally (allow parentheses and operators)
         expr += v;
         render();
       });
     });
 
-    // keyboard support (very basic)
+    
     window.addEventListener('keydown', (ev) => {
       if(/[0-9()+\-*/.]/.test(ev.key)) { expr += ev.key; render(); }
       if(ev.key === 'Enter') { document.querySelector('.btn.equal').click(); }
