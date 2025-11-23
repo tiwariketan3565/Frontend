@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Form Validation</title>
+  <link rel="stylesheet" href="task4.css">
+</head>
+<body>
+
+  <h2>Registration Form</h2>
+
+  <form id="signupForm">
+
+    <div class="input-group">
+      <input type="text" id="fullName" placeholder="Enter Name">
+      <div id="nameError" class="errorMsg"></div>
+    </div>
+
+    <div class="input-group">
+      <input type="text" id="userEmail" placeholder="Enter Email">
+      <div id="emailError" class="errorMsg"></div>
+    </div>
+
+    <div class="input-group">
+      <input type="password" id="userPassword" placeholder="Enter Password" maxlength="8">
+      <div id="passwordError" class="errorMsg"></div>
+    </div>
+
+    <button type="submit">Submit</button>
+
+  </form>
+
+  <script src="task4.js"></script>
+</body>
+</html>

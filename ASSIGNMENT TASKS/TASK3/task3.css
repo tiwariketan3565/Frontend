@@ -1,0 +1,44 @@
+body {
+    font-family: Arial;
+    padding: 20px;
+    background: #eef0ff;
+}
+
+.slider-box {
+    width: 400px;
+    margin: auto;
+    background: white;
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.slider-box #mainImage {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: opacity 0.4s ease;
+}
+
+.nav-controls {
+    margin-top: 12px;
+}
+
+#btnBack,
+#btnNext {
+    padding: 8px 15px;
+    margin: 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #5b7cfa;
+    color: white;
+    cursor: pointer;
+}
+
+#btnBack:hover,
+#btnNext:hover {
+    background: #3d59d7;
+}
